@@ -66,7 +66,7 @@ def get_per_year_change(col,df,metric):
 
 
 # cache the dataset
-@st.cache_data(ttl=3600)
+@st.cache_data(ttl=50)
 def load_data():
     df = pd.read_excel('Sample - Superstore.xls',sheet_name=0)
     # get the year and store as a new column
